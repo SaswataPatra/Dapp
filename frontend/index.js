@@ -130,6 +130,7 @@ const setNewPet = () => {
 
   /* 5.3 Set pet details in smart contract */
   PetContract.setPet(petName, petOwner, petAge)
+    .then((tx) => tx.wait())
     .then(() => {
       // update button value
       setPetButton.value = "Pet Set...";

@@ -103,9 +103,9 @@ async function main() {
     signer
   );
 
-  // const tx = await USDTContract.setPet("Bobby", "John", "10");
-  // const receipt = await tx.wait();
-  // console.log("receipt: ", receipt);
+  const tx = await USDTContract.setPet("Bobby", "John", "10");
+  const receipt = await tx.wait();
+  console.log("receipt: ", receipt);
   const petName = await USDTContract.getPet();
   console.log("petName: ", petName);
 }
